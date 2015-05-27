@@ -4,6 +4,7 @@ var collect_all_even = require('../../practices/collectionOperator/collect_all_e
 
 describe('collect_all_even', function () {
 
+
   var collection_a = [1, 2, 3, 4, 5];
   var collection_b = [2, 4];
 
@@ -13,4 +14,3 @@ describe('collect_all_even', function () {
     expect(result).toEqual(collection_b);
   });
 });
-
