@@ -3,9 +3,33 @@
 function get_integer_interval_2(number_a, number_b) {
   //在这里写入代码
   var _ = require('../lodash/array');
-  var collection_c = [];
-   collection_c = _.intersection(number_b,number_a);
-  return collection_c;
+
+  return dispose(number_a,number_b);
 }
+
+function dispose(number_a,number_b){
+  var temp = [];
+  if (number_a <= number_b) {
+    //根据给出的两个数字得到自增的偶数区间
+    for (var i = number_a; i <= number_b; i++) {
+      temp = judge(i,temp);
+    }
+  }
+  else if (number_a > number_b) {
+    //根据给出的两个数字得到自减的偶数区间
+    for (var j = number_a; j >= number_b; j--) {
+      temp = judge(j,temp);
+    }
+  }
+  return temp;
+}
+
+function judge(i,temp){
+  if( i % 2 ===0){
+    temp.push(i);
+  }
+  return temp;
+}
+
 
 module.exports = get_integer_interval_2;
