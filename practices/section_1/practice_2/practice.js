@@ -1,8 +1,13 @@
 function collect_same_elements(collection_a, collection_b) {
-  //在这里写入代码
-  var _ = require('../../lodash');
-  var temp = _.flatten(collection_b);
-  return _.intersection(collection_a,temp);
+    var result = [];
+    for (var i = 0; i < collection_a.length; i++) {
+        for (var x = 0; x < collection_b.length; x++) {
+            if (collection_a[i] === collection_b[x][x]) {
+                result.push(collection_a[i]);
+            }
+        }
+    }
+    return result;
 }
 
 module.exports = collect_same_elements;

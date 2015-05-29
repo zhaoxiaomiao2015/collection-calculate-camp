@@ -1,15 +1,17 @@
 'use strict';
 
-function array_sort(collection){
-     return collection.sort(function(a,b){
-         return a-b;
-     });
-   }
+
 var rank_asc = function(collection){
-
-  //利用sort方法进行排序
-  return collection.sort(array_sort);
-
+    var element = [];
+    for (var i = 0; i < collection.length; i++) {
+      if (collection[i] < collection[ i + 1 ]) {
+        element.push(collection[ i + 1 ]);
+      }
+      else {
+        element.push(collection[i]);
+      }
+    }
+    return element;
 }
 
 module.exports = rank_asc;

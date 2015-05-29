@@ -1,14 +1,13 @@
 'use strict';
 
 function compare_collections(collection_a, collection_b) {
-  //在这里写入代码
-  var _ = require('../lodash/array');
-  var flag = _.difference(collection_a, collection_b);
-  if (flag.length === 0) {
-      return true;
-  }else {
-    return false;
-  }
+    var string_a = collection_a.toString();
+    var string_b = collection_b.toString();
+    if (string_a === string_b) {
+        return true;
+    }else {
+        return false;
+    }
 }
 
 module.exports = compare_collections;
