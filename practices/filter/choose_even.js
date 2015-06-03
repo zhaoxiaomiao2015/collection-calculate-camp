@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('../../my_lodash/my_lodash.js');
 
 function choose_even(collection) {
   // var evens = [];
@@ -9,16 +10,9 @@ function choose_even(collection) {
   // }
   // return evens;
 
-
-  var filter = require('../../my_lodash/filter.js');
-  var each = require('../../my_lodash/each.js');
   var result = [];
-  result = filter(collection,function(element){
-    if(element % 2 === 0){
-       return true;
-    }else {
-      return false;
-    }
+  result = _.filter_in(collection,function(element){
+  return element % 2 === 0;
   });
   return result;
 }

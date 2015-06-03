@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('../my_lodash/my_lodash.js');
 
 function collect_min_number(collection) {
     // var result = collection[0];
@@ -8,8 +9,7 @@ function collect_min_number(collection) {
     //   }
     // }
     // return result;
-    min = require('../../my_lodash/min.js');
-    return min(collection);
+    return _.min(collection);
 
 }
 

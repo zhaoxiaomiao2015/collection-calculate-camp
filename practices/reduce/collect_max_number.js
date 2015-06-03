@@ -1,3 +1,4 @@
+var _ = require('../my_lodash/my_lodash.js');
 
   function collect_max_number(collection) {
     // var result = collection[0];
@@ -7,8 +8,7 @@
     //     }
     // }
     // return result;
-    max = require('../../my_lodash/max.js');
-    return max(collection);
+    return _.max(collection);
   }
 
 module.exports = collect_max_number;

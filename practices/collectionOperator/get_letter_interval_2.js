@@ -2,7 +2,7 @@
 'use strict';
 
 function get_even_number(array,number) {
-    if(number%2 === 0){
+    if(number % 2 === 0){
         array[array.length] = number;
     }
     return array;

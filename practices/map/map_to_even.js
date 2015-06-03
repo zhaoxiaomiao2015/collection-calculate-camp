@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('../../my_lodash/my_lodash.js');
 
 function map_to_even(collection){
     // var double_collection = [];
@@ -7,9 +8,8 @@ function map_to_even(collection){
     // }
     // return double_collection;
 
-    var map = require('../../my_lodash/map.js');
     var result = [];
-    result = map(collection,function (items){
+    result = _.map(collection,function (items){
       return items * 2;
     });
     return result;
