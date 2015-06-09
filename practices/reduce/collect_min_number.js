@@ -1,5 +1,5 @@
 'use strict';
-var _ = require('../my_lodash/my_lodash.js');
+var _ = require('../../my_lodash/my_lodash.js');
 
 function collect_min_number(collection) {
     // var result = collection[0];

@@ -1,4 +1,4 @@
-var _ = require('../my_lodash/my_lodash.js');
+var _ = require('../../my_lodash/my_lodash.js');
 
   function collect_max_number(collection) {
     // var result = collection[0];

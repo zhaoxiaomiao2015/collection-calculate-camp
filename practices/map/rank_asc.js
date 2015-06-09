@@ -1,25 +1,23 @@
 'use strict';
-var _ = require('../my_lodash/my_lodash.js');
+var _ = require('../../my_lodash/my_lodash.js');
+
+function array_sort(array){
+  for (var i = 0; i < array.length -1; i++) {
+    for (var j = 0; j < array.length -1 - i; j++) {
+      if (array[j] < array[j +1]) {
+        var temp;
+        temp = array[j +1];
+        array[j +1] = array[j];
+        array[j] = temp;
+      }
+    }
+  }
+  return array;
+}
 
 var rank_asc = function(collection){
-  var _sort = _.up_sort(collection);
-  var length = result_sort.length;
-  var result = [];
-  for (;length--;) {
-    result[result.length] = result_sort[length];
-  }
-  return result;
-
-    // var element = [];
-    // for (var i = 0; i < collection.length; i++) {
-    //   if (collection[i] < collection[ i + 1 ]) {
-    //     element.push(collection[ i + 1 ]);
-    //   }
-    //   else {
-    //     element.push(collection[i]);
-    //   }
-    // }
-    // return element;
+  var element = array_sort(collection);
+    return element;
 }
 
 module.exports = rank_asc;
