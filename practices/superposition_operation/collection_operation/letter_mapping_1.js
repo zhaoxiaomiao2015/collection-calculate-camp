@@ -1,17 +1,14 @@
 'use strict';
 
+var _ = require('../../../my_lodash/my_lodash.js');
 function even_to_letter(collection) {
   var even = [];
   var result = [];
-  for (var i = 0; i < collection.length; i++) {
-    if ( collection[i] % 2 ===0) {
-      even.push(collection[i]);
+  _.each(collection, function(val, i){
+    if (val % 2 === 0) {
+      result.push(String.fromCharCode(val + 96));
     }
-  }
-
-  for (var x = 0; x < even.length; x++) {
-    result.push(String.fromCharCode(even[x] + 96));
-  }
+  });
   return result;
 }
 

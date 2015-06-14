@@ -1,14 +1,14 @@
 'use strict';
+var _ = require('../../../my_lodash/my_lodash.js');
 
 function amount_even(collection) {
   var sum = 0;
-  for (var i = 0; i < collection.length; i++) {
-    if (collection[i] % 2 ===0) {
-      sum += collection[i];
+  _.each(collection, function(val, i){
+    if (val % 2 === 0) {
+      sum += val;
     }
-  }
+  });
   return sum;
-  //在这里写入代码
 }
 
 module.exports = amount_even;

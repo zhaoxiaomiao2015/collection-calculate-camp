@@ -1,14 +1,14 @@
 'use strict';
+var _ = require('../../../my_lodash/my_lodash.js');
 
 function average_uneven(collection) {
-  var sum = 0;
-  var even = 0;
-  for (var i = 0; i < collection.length; i++) {
-    if (collection[i] % 2 !== 0) {
-      sum += collection[i];
+  var result = [];
+  _.each(collection, function(val, i){
+    if (val % 2 !== 0) {
+      result.push(val);
     }
-  }
-  return even = sum/((collection.length / 2));
+  });
+  return (_.average(result));
 }
 
 module.exports = average_uneven;

@@ -1,22 +1,11 @@
 'use strict';
 
-function array_sort(array){
-  for (var i = 0; i < array.length -1; i++) {
-    for (var j = 0; j < array.length -1 - i; j++) {
-      if (array[j] > array[j +1]) {
-        var temp;
-        temp = array[j +1];
-        array[j +1] = array[j];
-        array[j] = temp;
-      }
-    }
-  }
-  return array;
-}
-
+var _ = require('../../my_lodash/my_lodash.js');
 var rank_desc = function(collection){
-
-  return array_sort(collection);
+  var result = _.my_sort(collection, function(a, b){
+    return a > b;
+  });
+  return result;
 };
 
 module.exports = rank_desc;

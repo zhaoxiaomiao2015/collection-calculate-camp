@@ -1,12 +1,8 @@
 'use strict';
+
+var _ = require('../../../../my_lodash/my_lodash.js');
 var calculate_average = function(collection){
-  var sum = 0;
-  var even = 0;
-  for (var i = 0; i < collection.length; i++) {
-    sum += collection[i];
-  }
-  even = sum /collection.length-1;
-  return Math.ceil(even);
+ return  Math.ceil(_.average(collection));
 
 };
 module.exports = calculate_average;

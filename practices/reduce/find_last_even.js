@@ -1,13 +1,13 @@
 'use strict';
+var _ = require('../../my_lodash/my_lodash.js');
 
 function find_last_even(collection) {
   var result;
-  for (var i = collection.length; i >= 0; i--) {
-    if (collection[i] % 2 === 0) {
-        result = collection[i];
-        break;
+  _.each(collection, function(val, i){
+    if (val % 2 === 0)  {
+      result = val;
     }
-  }
+  });
   return result;
 }
 

@@ -12,6 +12,6 @@ describe('calculate_average_spec', function () {
 
     it('集合个数为奇数时，算平均数', function () {
         var result = calculate_average(collection_b);
-        expect(result).toEqual(12);
+        expect(result).toEqual(5);
     });
 });
